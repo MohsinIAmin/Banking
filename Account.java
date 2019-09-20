@@ -15,7 +15,9 @@ public class Account {
     private final int accountStartingRange=10000;
     
     MassegeBox massege=new MassegeBox();
-
+    public Account(){
+        
+    }
     public Account (String name,String address,String phone){
         this.accountHolderName=name;
         this.accountHolderAddress=address;
@@ -84,4 +86,5 @@ public class Account {
                 +"\nAddress : "+this.accountHolderAddress
                 +"\nPhone : " + this.accountHolderPhone;
     }
+    
 }

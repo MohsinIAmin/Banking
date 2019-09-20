@@ -9,10 +9,16 @@ import javax.swing.JOptionPane;
 
 
 public class MassegeBox {
-    double inputBox(String showMassege)
+    double inputBoxDouble(String showMassege)
     {
         String input=JOptionPane.showInputDialog(showMassege);
         double number=Double.parseDouble(input);
+        return number;
+    }
+    int inputBoxInt(String showMassege)
+    {
+        String input=JOptionPane.showInputDialog(showMassege);
+        int number=Integer.parseInt(input);
         return number;
     }
     String inputBoxString(String showMassege)
