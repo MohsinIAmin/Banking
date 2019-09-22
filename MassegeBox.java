@@ -1,40 +1,47 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package userSector;
 
 import javax.swing.JOptionPane;
 
-
 public class MassegeBox {
-    double inputBoxDouble(String showMassege)
+    private static String input;
+    private static boolean cheacker(){
+        int check=input.length()-1;
+        for(;check!=-1;check--){
+            if(!Character.isDigit(input.charAt(check))){
+                return false;
+            }
+        }
+        return true;
+    }
+    public static double inputBoxDouble(String showMassege)
     {
-        String input=JOptionPane.showInputDialog(showMassege);
-        if("".equals(input)){
+        input=JOptionPane.showInputDialog(showMassege);
+        if(!cheacker()){  
             return -1;
         }
         double number=Double.parseDouble(input);
         return number;
     }
-    int inputBoxInt(String showMassege)
+    public static int inputBoxInt(String showMassege)
     {        
-        String input=JOptionPane.showInputDialog(showMassege);
-        if("".equals(input)){
+        input=JOptionPane.showInputDialog(showMassege);
+        if(!cheacker()){
             return -1;
         }
         int number=Integer.parseInt(input);
         return number;
     }
-    String inputBoxString(String showMassege)
+    public static String inputBoxString(String showMassege)
     {
         String input=JOptionPane.showInputDialog(showMassege);
         return input;
     }
-    void outputBox(String showMassege)
+    public static void outputBox(String showMassege)
     {
         JOptionPane.showMessageDialog(null,showMassege);
+    }
+    public static void outputBox(String worning,String showMassege){
+        JOptionPane.showMessageDialog(null, showMassege , worning, JOptionPane.ERROR_MESSAGE);
     }
     
 }

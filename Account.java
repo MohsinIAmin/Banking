@@ -54,7 +54,7 @@ public class Account {
     }
     public boolean withdrawl(double amount){
         if(amount<0){
-            massege.outputBox("Negative amount can not be withdrowl");
+            massege.outputBox("Warning","Negative amount can not be withdrowl");
             return false;
         }
         if(balance-amount>=100){
@@ -62,7 +62,7 @@ public class Account {
             massege.outputBox("Withdrawl succeful");
             return true;
         }
-        massege.outputBox("Cut your coat according to your cloth");
+        massege.outputBox("Warning","Cut your coat according to your cloth");
         return false;
     }
     public boolean deposite(double amount){
@@ -71,7 +71,7 @@ public class Account {
             massege.outputBox("Deposit succeful");
             return true;
         }
-        massege.outputBox("Deposit failur");
+        massege.outputBox("Warning","Deposit failur");
         return false;
     }
     private void accountNumberGenerator(){
