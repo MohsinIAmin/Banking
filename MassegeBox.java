@@ -1,6 +1,7 @@
 package userSector;
 
 import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
 
 public class MassegeBox {
     private static String input;
@@ -42,6 +43,10 @@ public class MassegeBox {
     }
     public static void outputBox(String worning,String showMassege){
         JOptionPane.showMessageDialog(null, showMassege , worning, JOptionPane.ERROR_MESSAGE);
+    }
+    public static void outputBox(String heading,String showMassege,String source){
+        ImageIcon icon = new ImageIcon(source);
+        JOptionPane.showMessageDialog(null, heading,showMassege, JOptionPane.INFORMATION_MESSAGE, icon);
     }
     
 }
