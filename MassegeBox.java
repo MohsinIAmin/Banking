@@ -34,7 +34,7 @@ public class MassegeBox {
     }
     public static String inputBoxString(String showMassege)
     {
-        String input=JOptionPane.showInputDialog(showMassege);
+        input=JOptionPane.showInputDialog(showMassege);
         return input;
     }
     public static void outputBox(String showMassege)
@@ -45,8 +45,13 @@ public class MassegeBox {
         JOptionPane.showMessageDialog(null, showMassege , worning, JOptionPane.ERROR_MESSAGE);
     }
     public static void outputBox(String heading,String showMassege,String source){
-        ImageIcon icon = new ImageIcon(source);
-        JOptionPane.showMessageDialog(null, heading,showMassege, JOptionPane.INFORMATION_MESSAGE, icon);
+        if(!source.equals("")){
+            ImageIcon icon = new ImageIcon(source);
+            JOptionPane.showMessageDialog(null,showMassege, heading, JOptionPane.INFORMATION_MESSAGE, icon);
+        }
+        else {
+            JOptionPane.showMessageDialog(null,showMassege);
+        }
     }
     
 }

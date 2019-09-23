@@ -17,9 +17,9 @@ public class CreatingAccount {
         if(holderNumber.equals("")){
             return false;
         }
-        newAccount=new Account(holderName,holderAddress,holderNumber,
-                MassegeBox.inputBoxString("Enter your NID"),
-                MassegeBox.inputBoxString("Enter your photo"));
+        String holderNID=MassegeBox.inputBoxString("Enter your NID");
+        String holderPhoto=MassegeBox.inputBoxString("Enter your photo");
+        newAccount=new Account(holderName,holderAddress,holderNumber,holderNID,holderPhoto);
         return true;
     }
 }

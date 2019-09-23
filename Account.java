@@ -86,5 +86,8 @@ public class Account {
                 +"\nAddress : "+this.accountHolderAddress
                 +"\nPhone : " + this.accountHolderPhone;
     }
+    public String accountHolderPhoto(){
+        return this.accountHolderPhoto;
+    }
     
 }

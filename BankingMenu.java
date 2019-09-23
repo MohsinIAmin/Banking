@@ -36,7 +36,8 @@ public class BankingMenu {
             boolean indicator=true;
             while (j != accountIterator) {
                 if (accountNumber.equals(user[j].newAccount.cheakAccountNumber())) {
-                    MassegeBox.outputBox(user[j].newAccount.informationOfAccountHolder());
+                    MassegeBox.outputBox("Information",user[j].newAccount.informationOfAccountHolder(),
+                            user[j].newAccount.accountHolderPhoto());
                     indicator=false;
                 }
                 j++;
